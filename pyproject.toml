@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "smartgpt-langchain"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "smartgpt_langchain"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.0.173"
+fastapi = "^0.95.2"
+daphne = "openai"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
