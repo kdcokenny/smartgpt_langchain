@@ -1,8 +1,8 @@
-# ShareGPT + Langchain
+# SmartGPT + Langchain
 
 This project was built using [Elapse](https://www.elapse.ai).
 
-The concept behind ShareGPT + Langchain was informed by the research from this [video](https://www.youtube.com/watch?v=wVzuvf9D9BU) by 'AI Explain'.
+The concept behind SmartGPT + Langchain was informed by the research from this [video](https://www.youtube.com/watch?v=wVzuvf9D9BU) by 'AI Explain'.
 
 ## Relevant Sources
 
@@ -33,27 +33,35 @@ Follow these steps to get the project up and running on your local machine.
    curl -sSL https://install.python-poetry.org | python3 -
    ```
 
-3. **Install Dependencies**
+3. **Create a .env file**
 
-   Once you have installed Poetry, use it to update the project's dependencies with the following command:
+   In the root directory of the project, create a .env file to store your OpenAI API key. Your .env file should look something like this:
+   ```
+   OPENAI_API_KEY=yourapikeyhere
+   ```
+   Be sure to replace "yourapikeyhere" with your actual OpenAI API key.
+
+4. **Install Dependencies**
+
+   Once you have installed Poetry and created your .env file, use Poetry to update the project's dependencies with the following command:
    ```
    poetry update
    ```
 
-4. **Enter the Poetry Shell**
+5. **Enter the Poetry Shell**
 
    Enter the virtual environment created by Poetry using the following command:
    ```
    poetry shell
    ```
 
-5. **Run the Local Server**
+6. **Run the Local Server**
 
    Now that you have all the dependencies installed and are inside the virtual environment, use the following command to start the local server:
    ```
    python run.py
    ```
 
-6. **Visit the Server**
+7. **Visit the Server**
 
    Open a new browser on your computer, and navigate to http://localhost:8000 to access the local server.
