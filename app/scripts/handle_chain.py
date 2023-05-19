@@ -6,9 +6,7 @@ from app.scripts import (
 )
 
 
-def handle_smartgpt_chain(query: str):
-    model = "gpt-3.5-turbo"
-
+def handle_smartgpt_chain(query: str, model: str):
     answer_output_keys = ["answer_one", "answer_two", "answer_three"]
     answer_chains = []
     for output_key in answer_output_keys:
