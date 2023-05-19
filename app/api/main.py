@@ -22,6 +22,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
         query = message["query"]
         model = message["model"]
+        print(f"Model: {model}")
         response = handle_smartgpt_chain(query, model)
         answer = response["final_answer"]
 

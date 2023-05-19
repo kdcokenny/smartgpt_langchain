@@ -1,6 +1,7 @@
 const messageInput = document.getElementById("message-input");
 const sendButton = document.getElementById("send-button");
 const chatMessages = document.getElementById("chat-messages");
+const modelSelect = document.getElementById("model-select");
 const loader = document.querySelector(".loader");
 
 sendButton.addEventListener("click", sendMessage);
@@ -25,9 +26,11 @@ websocket.onmessage = (event) => {
 
 function sendMessage() {
   const message = messageInput.value.trim();
+  const model = modelSelect.value;
   if (message) {
     loader.style.display = "block";
-    websocket.send(JSON.stringify({ query: message, model: "gpt-3.5-turbo" }));
+    console.log(message, model);
+    websocket.send(JSON.stringify({ query: message, model: model }));
     messageInput.value = "";
   }
 }
